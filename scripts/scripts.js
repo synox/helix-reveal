@@ -1,4 +1,4 @@
-import { HelixApp, readBlockConfig, toClassName } from 'https://cdn.skypack.dev/@dylandepass/helix-web-library@v1.3.14/dist/helix-web-library.esm.min.js';
+import { HelixApp, readBlockConfig, toClassName } from 'https://cdn.skypack.dev/@dylandepass/helix-web-library@v1.4.2/dist/helix-web-library.esm.js';
 import Reveal from './reveal.esm.js';
 import RevealZoom from '../plugin/zoom/zoom.esm.js';
 import RevealNotes from '../plugin/notes/notes.esm.js';
@@ -42,7 +42,11 @@ function decorateReveal() {
   });
 }
 
-HelixApp.init()
+HelixApp.init({
+  blocksSelector: 'section > div',
+  lcpBlocks: [],
+  makeLinksRelative: false
+})
   .withLoadEager(() => {
     decorateReveal();
     Reveal.initialize({
