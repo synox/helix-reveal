@@ -1,14 +1,14 @@
 
+
 .table  img {
-  height: 200px;
+  height: 100px;
 }
 
-td {
+.table td {
   font-size: 0.6em;
 }
 
 
-/*not first td*/
-td:nth-child(even) {
+.table  td:nth-child(even) {
   background-color: lightcyan;
 }
