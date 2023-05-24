@@ -1,0 +1,9 @@
+.brands > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.brands  img {
+  height: 200px;
+}
