@@ -37,7 +37,7 @@ function decorateReveal() {
 
   // Use line numbers on any code blocks.. assume javascript
   main.querySelectorAll('code').forEach((code) => {
-    code.setAttribute('data-line-numbers', '');
+    // code.setAttribute('data-line-numbers', '');
     code.classList.add('language-javascript');
   });
 }
@@ -50,6 +50,8 @@ HelixApp.init({
   .withLoadEager(() => {
     decorateReveal();
     Reveal.initialize({
+      width: 1600,
+      height: 900,
       controls: true,
       progress: true,
       center: true,

@@ -5,3 +5,7 @@ body {
 body.appear {
   opacity: 1;
 }
+
+p.small {
+    font-size: 0.5em;
+}

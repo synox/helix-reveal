@@ -1,0 +1,35 @@
+
+
+
+
+.gpt > div {
+  display: flex;
+}
+
+.gpt .query, .gpt .response {
+  width: 50%;
+  position: relative;
+  text-align: left;
+  font-size: 0.8em;
+  overflow-y: scroll;
+  max-height: 100vh;
+  padding: 1em 1em 1em 2em;
+}
+
+.gpt .query {
+  /*border-right: 1px solid;*/
+}
+.gpt .response {
+  background-color: #f7f7f8;
+
+}
+
+
+
+.gpt-image {
+    width: 1.5em;
+    height: auto;
+    position: absolute;
+    left: 5px;
+}
+
