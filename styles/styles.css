@@ -12,7 +12,7 @@ p.small {
 
 [data-title-slide] {
     --r-heading-color: white;
-    max-width: 80%;
+    max-width: 87%;
 }
 [data-title-slide] p {
     color: var(--r-heading-color);
