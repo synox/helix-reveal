@@ -9,3 +9,11 @@ body.appear {
 p.small {
     font-size: 0.5em;
 }
+
+[data-title-slide] {
+    --r-heading-color: white;
+    max-width: 80%;
+}
+[data-title-slide] p {
+    color: var(--r-heading-color);
+}
