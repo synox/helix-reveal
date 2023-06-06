@@ -1,19 +1,26 @@
 body {
-  opacity: 0;
+    opacity: 0;
+    font-family: 'Adobe Clean';
 }
 
 body.appear {
-  opacity: 1;
+    opacity: 1;
 }
 
-p.small {
+span.small {
     font-size: 0.5em;
+}
+
+span.topic {
+    color: #eb1001;
+    font-family: 'Adobe Clean Light';
 }
 
 [data-title-slide] {
     --r-heading-color: white;
     max-width: 87%;
 }
+
 [data-title-slide] p {
     color: var(--r-heading-color);
 }
