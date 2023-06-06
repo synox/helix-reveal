@@ -21,6 +21,7 @@ span.topic {
     max-width: 86%;
 }
 
-[data-title-slide] p {
-    color: var(--r-heading-color);
+.reveal [data-last-slide] a {
+    --r-link-color: #eb1000;
+    --r-link-color-hover: #d57e77;
 }
