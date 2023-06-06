@@ -26,13 +26,15 @@ function decorateReveal() {
   // Treat links that contain an href that starts with http://attribute as attributes
   // Decorate the parent element with the attributes and remove the achor tag
   main.querySelectorAll("[href^='http://attribute']").forEach((link) => {
-    const parent = link.parentNode;
+    const span = document.createElement('span');
     const attributes = link.href.replace('http://attribute/?', '').split('&');
     attributes.forEach((attribute) => {
       const [key, value] = attribute.split('=');
-      parent.setAttribute(key, decodeURI(value));
+      span.setAttribute(key, decodeURI(value));
     });
-    parent.innerHTML = link.innerHTML;
+    // replace with span
+    span.innerHTML = link.innerHTML;
+    link.replaceWith(span);
   });
 
   // Use line numbers on any code blocks.. assume javascript
