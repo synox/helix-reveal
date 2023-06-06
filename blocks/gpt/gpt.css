@@ -16,11 +16,29 @@
   padding: 1em 1em 1em 2em;
 }
 
-.gpt .query {
-  /*border-right: 1px solid;*/
+
+.gpt .query{
+    border-left:8px solid #7c7c7c;
+    line-height:1.6;
 }
+
+
+.gpt .query::before{
+    font-family:Arial;
+    content: "\201C";
+    color: #7c7c7c;
+    font-size:4em;
+    position: absolute;
+    left: 0;
+    top:-30px;
+}
+
+blockquote::after{
+    content: '';
+}
+
 .gpt .response {
-  background-color: #f7f7f8;
+  background-color: #F5F5F5;
 
 }
 

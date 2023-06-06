@@ -32,7 +32,7 @@ export default async function decorate(block) {
     const rows = [...block.children];
     rows.forEach((row) => {
         row.children[0].classList.add('query');
-        row.children[0].prepend(userImage());
+        // row.children[0].prepend(userImage());
         row.children[1].classList.add('response');
         row.children[1].classList.add('fragment');
         row.children[1].prepend(gptImage());
