@@ -37,6 +37,35 @@ function decorateReveal() {
     link.replaceWith(span);
   });
 
+
+  // create vertical slides using <p>===</p>
+  function onlyUnique(value, index, array) {
+    return array.indexOf(value) === index;
+  }
+  [...main.querySelectorAll('p')]
+      .filter((p) => p.innerHTML === '===' && p.parentElement.tagName === 'SECTION')
+      .map((p) => p.parentElement)
+      .filter(onlyUnique)
+      .forEach((parent) => {
+        console.log(parent);
+      const newSections = [];
+      let newSection = document.createElement('section');
+      newSections.push(newSection);
+      while (parent.firstElementChild ) {
+        const child = parent.firstElementChild;
+        child.remove();
+        if(child.innerHTML === '===') {
+          newSection = document.createElement('section');
+          newSections.push(newSection);
+        } else {
+          newSection.append(child);
+        }
+      }
+
+      parent.append(...newSections);
+
+  });
+
   // Use line numbers on any code blocks.. assume javascript
   main.querySelectorAll('code').forEach((code) => {
     // code.setAttribute('data-line-numbers', '');
